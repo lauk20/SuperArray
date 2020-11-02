@@ -6,5 +6,7 @@ public class Tester{
     System.out.println(A.add("YUP2"));
     System.out.println(A.get(0));
     System.out.println(A.get(1));
+    System.out.println(A.set(0, "REPLACEDYUP"));
+    System.out.println(A.get(0));
   }
 }
