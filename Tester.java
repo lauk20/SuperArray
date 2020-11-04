@@ -30,6 +30,8 @@ public class Tester{
     C.add(5, "INSERTED");
     System.out.println(C.toString());
     System.out.println(C.contains("0"));
+    C.remove(5);
+    System.out.println(C.toString());
     C.clear();
     C.isEmpty();
     System.out.println(C.get(0));
@@ -37,6 +39,6 @@ public class Tester{
     System.out.println();
 
     SuperArray D = new SuperArray(50);
-    System.out.println(D.get(50));
+    System.out.println(D.get(49));
   }
 }

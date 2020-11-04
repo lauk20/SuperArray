@@ -42,6 +42,21 @@ public class SuperArray{
     size = size + 1;
   }
 
+  public String remove(int index){
+    String removedItem = data[index];
+
+    for (int i = index + 1; i < size; i++){
+      data[i - 1] = data[i];
+      if (i == size - 1){
+        data[i] = null;
+      }
+    }
+
+    size = size - 1;
+
+    return removedItem;
+  }
+
   public String get(int index){
     return data[index];
   }
