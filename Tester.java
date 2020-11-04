@@ -23,11 +23,13 @@ public class Tester{
     SuperArray C = new SuperArray();
     System.out.println(C.isEmpty());
     for (int i = 0; i < 10; i++){
-      B.add(Integer.toString(i));
+      C.add(Integer.toString(i));
     }
     System.out.println(C.size());
+    System.out.println(C.toString());
     C.clear();
     C.isEmpty();
     System.out.println(C.get(0));
+    System.out.println(C.toString());
   }
 }

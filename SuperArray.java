@@ -55,4 +55,21 @@ public class SuperArray{
     size = 0;
   }
 
+  public String toString(){
+    String result = "[";
+
+    for (int i = 0; i < size; i++){
+      if (data[i] != null){
+        result = result + data[i];
+        if (size - 1 != i){
+          result = result + ", ";
+        }
+      }
+    }
+
+    result = result + "]";
+
+    return result;
+  }
+
 }
