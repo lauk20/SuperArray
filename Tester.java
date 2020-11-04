@@ -27,10 +27,16 @@ public class Tester{
     }
     System.out.println(C.size());
     System.out.println(C.toString());
+    C.add(5, "INSERTED");
+    System.out.println(C.toString());
     System.out.println(C.contains("0"));
     C.clear();
     C.isEmpty();
     System.out.println(C.get(0));
     System.out.println(C.toString());
+    System.out.println();
+
+    SuperArray D = new SuperArray(50);
+    System.out.println(D.get(50));
   }
 }

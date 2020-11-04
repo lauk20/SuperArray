@@ -8,6 +8,11 @@ public class SuperArray{
     size = 0;
   }
 
+  public SuperArray(int initialCapacity){
+    data = new String[initialCapacity];
+    size = 0;
+  }
+
   public int size(){
     return size;
   }
@@ -22,6 +27,21 @@ public class SuperArray{
     return true;
   }
 
+  public void add(int index, String element){
+    if (size == data.length){
+      resize();
+    }
+
+    for(int i = size - 1; i >= index; i = i - 1){
+      data[i + 1] = data[i];
+      if (i == index){
+        data[i] = element;
+      }
+    }
+
+    size = size + 1;
+  }
+
   public String get(int index){
     return data[index];
   }
@@ -34,7 +54,7 @@ public class SuperArray{
   }
 
   private void resize(){
-    String[] newArray = new String[data.length + 10];
+    String[] newArray = new String[data.length * 2];
 
     for (int i = 0; i < size; i++){
       newArray[i] = data[i];
@@ -73,7 +93,7 @@ public class SuperArray{
   }
 
   public boolean contains(String s){
-    for (int i = 0; i < size; i ++){
+    for (int i = 0; i < size; i++){
       if (data[i].equals(s)){
         return true;
       }
