@@ -30,7 +30,17 @@ public class Tester{
     C.add(5, "INSERTED");
     System.out.println(C.toString());
     System.out.println(C.contains("0"));
+    System.out.println(C.indexOf("INSERTED"));
+    System.out.println(C.indexOf("11212 24154325346 4574524 324236134 1425 35 hi"));
     C.remove(5);
+    System.out.println(C.toString());
+    C.remove(10);
+    System.out.println(C.toString());
+    C.remove(0);
+    System.out.println(C.toString());
+    C.add(0, "0");
+    System.out.println(C.toString());
+    C.add(10, "9");
     System.out.println(C.toString());
     C.clear();
     C.isEmpty();
