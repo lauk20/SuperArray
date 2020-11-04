@@ -17,5 +17,10 @@ public class Tester{
     B.add("10");
     System.out.println(B.size());
     System.out.println(B.get(10));
+    System.out.println();
+    System.out.println();
+
+    SuperArray C = new SuperArray();
+    System.out.println(C.isEmpty());
   }
 }
