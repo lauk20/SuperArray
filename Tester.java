@@ -27,6 +27,7 @@ public class Tester{
     }
     System.out.println(C.size());
     System.out.println(C.toString());
+    System.out.println(C.contains("0"));
     C.clear();
     C.isEmpty();
     System.out.println(C.get(0));
