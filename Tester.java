@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Tester{
   public static void main(String[] args){
     SuperArray A = new SuperArray();
@@ -42,11 +44,17 @@ public class Tester{
     System.out.println(C.toString());
     C.add(10, "9");
     System.out.println(C.toString());
+    String[] testing = C.toArray();
+    System.out.println("BELOW IS TOARRAY TEST");
+    System.out.println(testing); //see if its actually array
+    System.out.println(Arrays.toString(testing));
+    System.out.println("TOARRAY OVER");
     C.clear();
     C.isEmpty();
     System.out.println(C.get(0));
     System.out.println(C.toString());
     System.out.println();
+
 
     SuperArray D = new SuperArray(50);
     System.out.println(D.get(49));
