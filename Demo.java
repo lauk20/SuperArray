@@ -23,6 +23,21 @@ public class Demo{
     return newOne;
   }
 
+  public static SuperArray zip(SuperArray a, SuperArray b){
+    SuperArray combine = new SuperArray();
+
+    for (int i = 0; i < a.size() || i < b.size(); i++){
+      if (i < a.size()){
+        combine.add(a.get(i));
+      }
+      if (i < b.size()){
+        combine.add(b.get(i));
+      }
+    }
+
+    return combine;
+  }
+
   public static void main(String[]args){
     SuperArray words = new SuperArray();
     //grouped to save vertical space
@@ -68,6 +83,43 @@ public class Demo{
     removeDuplicates(C);
 
     System.out.println(C);
+
+    System.out.println("DEMO ZIP TEST\n");
+
+    SuperArray E = new SuperArray();
+    SuperArray F = new SuperArray();
+
+    E.add("a"); E.add("b"); E.add("c"); E.add("d"); E.add("e"); E.add("f");
+    F.add("0"); F.add("1"); F.add("2"); F.add("3");
+
+    System.out.println(zip(E, F));
+
+    E.clear();
+    F.clear();
+
+    E.add("a"); E.add("b"); E.add("c");
+    F.add("0"); F.add("1"); F.add("2"); F.add("3"); F.add("4");
+
+    System.out.println(zip(E, F));
+
+    E.clear();
+    F.clear();
+
+    E.add("1"); E.add("3"); E.add("5");
+    F.add("2"); F.add("4"); F.add("6"); F.add("7"); F.add("8");
+
+    System.out.println(zip(E, F));
+
+    E.clear();
+    F.clear();
+
+    System.out.println(zip(E, F));
+
+    E.add("1"); E.add("3"); E.add("5");
+
+    System.out.println(zip(E, F));
+
+    System.out.println(zip(F, E));
   }
 
 }
