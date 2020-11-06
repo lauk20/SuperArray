@@ -16,10 +16,13 @@ public class Tester{
       B.add(Integer.toString(i));
     }
     System.out.println(B.size());
+    System.out.println(B.toString());
+    B.remove(9);
+    System.out.println(B.toString());
     B.add("10");
+    System.out.println(B.toString());
     System.out.println(B.size());
-    System.out.println(B.get(10));
-    System.out.println();
+    System.out.println(B.get(9));
     System.out.println();
 
     SuperArray C = new SuperArray();
@@ -55,8 +58,26 @@ public class Tester{
     System.out.println(C.toString());
     System.out.println();
 
-
     SuperArray D = new SuperArray(50);
     System.out.println(D.get(49));
+
+    System.out.println("NEW TESTS START HERE\n");
+    SuperArray E = new SuperArray();
+    SuperArray F = new SuperArray();
+
+    for (int i = 0; i < 10; i++){
+      E.add("1");
+    }
+
+    for (int i = 0; i < 10; i++){
+      F.add(Integer.toString(i));
+    }
+
+    System.out.println(E.lastIndexOf("1"));
+
+    System.out.println(F.lastIndexOf("1"));
+    System.out.println(F.lastIndexOf("9"));
+    System.out.println(F.lastIndexOf("5"));
+
   }
 }
