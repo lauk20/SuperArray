@@ -79,5 +79,41 @@ public class Tester{
     System.out.println(F.lastIndexOf("9"));
     System.out.println(F.lastIndexOf("5"));
 
+    System.out.println();
+    System.out.println("EQUALS TESTS START HERE\n");
+    SuperArray G = new SuperArray();
+    SuperArray H = new SuperArray();
+
+    for (int i = 0; i < 10; i++){
+      G.add("1");
+    }
+
+    for (int i = 0; i < 10; i++){
+      F.add(Integer.toString(i));
+    }
+
+    System.out.println(G.equals(F)); //false
+    System.out.println(F.equals(G)); //false
+
+    F.clear();
+
+    for (int i = 0; i < 10; i++){
+      F.add("1");
+    }
+
+    System.out.println(G.equals(F)); //true
+    System.out.println(F.equals(G)); //true
+
+    F.add("NOTEQUALANYMORE");
+
+    System.out.println(G.equals(F)); //false
+    System.out.println(F.equals(G)); //false
+
+    G.clear();
+    F.clear();
+
+    System.out.println(G.equals(F)); //true
+    System.out.println(F.equals(G)); //true
+
   }
 }
