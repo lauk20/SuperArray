@@ -62,6 +62,10 @@ public class SuperArray{
   }
 
   public String get(int index){
+    if (index < 0 || index >= size()){
+      throw new IndexOutOfBoundsException("Index is out of bounds. Size is " + size + " Index is " + index);
+    }
+    
     return data[index];
   }
 

@@ -54,12 +54,12 @@ public class Tester{
     System.out.println("TOARRAY OVER");
     C.clear();
     C.isEmpty();
-    System.out.println(C.get(0));
+    //System.out.println(C.get(0));
     System.out.println(C.toString());
     System.out.println();
 
     SuperArray D = new SuperArray(50);
-    System.out.println(D.get(49));
+    //System.out.println(D.get(49));
 
     System.out.println("NEW TESTS START HERE\n");
     SuperArray E = new SuperArray();
@@ -122,6 +122,13 @@ public class Tester{
       SuperArray J = new SuperArray(-1111);
     }
     catch(IllegalArgumentException e){
+      e.printStackTrace();
+    }
+
+    try{
+      G.get(G.size());
+    }
+    catch(IndexOutOfBoundsException e){
       e.printStackTrace();
     }
 
