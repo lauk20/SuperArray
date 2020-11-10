@@ -39,13 +39,13 @@ public class Tester{
     System.out.println(C.indexOf("11212 24154325346 4574524 324236134 1425 35 hi"));
     C.remove(5);
     System.out.println(C.toString());
-    C.remove(10);
+    //C.remove(10);
     System.out.println(C.toString());
     C.remove(0);
     System.out.println(C.toString());
     C.add(0, "0");
     System.out.println(C.toString());
-    C.add(10, "9");
+    //C.add(10, "9");
     System.out.println(C.toString());
     String[] testing = C.toArray();
     System.out.println("BELOW IS TOARRAY TEST");
@@ -134,6 +134,20 @@ public class Tester{
 
     try{
       G.set(-19, "hi");
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+
+    try{
+      G.add(G.size(), "hi2");
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+
+    try{
+      G.remove(-14515);
     }
     catch(IndexOutOfBoundsException e){
       e.printStackTrace();

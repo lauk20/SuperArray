@@ -32,6 +32,10 @@ public class SuperArray{
   }
 
   public void add(int index, String element){
+    if (index < 0 || index >= size()){
+      throw new IndexOutOfBoundsException("Index is out of bounds or negative. Size is " + size + " Index is " + index);
+    }
+
     if (size == data.length){
       resize();
     }
@@ -47,6 +51,10 @@ public class SuperArray{
   }
 
   public String remove(int index){
+    if (index < 0 || index >= size()){
+      throw new IndexOutOfBoundsException("Index is out of bounds or negative. Size is " + size + " Index is " + index);
+    }
+
     String removedItem = data[index];
 
     for (int i = index + 1; i < size; i++){
