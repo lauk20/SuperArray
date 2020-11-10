@@ -132,5 +132,12 @@ public class Tester{
       e.printStackTrace();
     }
 
+    try{
+      G.set(-19, "hi");
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+
   }
 }
