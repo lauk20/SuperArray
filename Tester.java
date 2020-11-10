@@ -115,5 +115,15 @@ public class Tester{
     System.out.println(G.equals(F)); //true
     System.out.println(F.equals(G)); //true
 
+    System.out.println("\nNEW TESTS FOR EXCEPTIONS START HERE");
+
+    try{
+      SuperArray I = new SuperArray(0);
+      SuperArray J = new SuperArray(-1111);
+    }
+    catch(IllegalArgumentException e){
+      e.printStackTrace();
+    }
+
   }
 }
