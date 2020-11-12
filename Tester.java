@@ -133,7 +133,21 @@ public class Tester{
     }
 
     try{
+      G.get(-1);
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+
+    try{
       G.set(-19, "hi");
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+
+    try{
+      G.set(G.size(), "hi");
     }
     catch(IndexOutOfBoundsException e){
       e.printStackTrace();
@@ -147,11 +161,31 @@ public class Tester{
     }
 
     try{
+      G.add(-1, "hi2");
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+
+    try{
       G.remove(-14515);
     }
     catch(IndexOutOfBoundsException e){
       e.printStackTrace();
     }
+
+    try{
+      G.remove(G.size());
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+
+    SuperArray TESTERZ = new SuperArray(0);
+
+    TESTERZ.add("HELLO");
+
+    System.out.println(TESTERZ.toString());
 
   }
 }
