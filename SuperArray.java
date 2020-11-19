@@ -42,10 +42,14 @@ public class SuperArray{
 
     for(int i = size - 1; i >= index; i = i - 1){
       data[i + 1] = data[i];
-      if (i == index){
+
+      /*if (i == index){
         data[i] = element;
-      }
+        System.out.println(data[i]);
+      }*/
     }
+
+    data[index] = element;
 
     size = size + 1;
   }
